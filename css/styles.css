@@ -15,6 +15,7 @@ background-image:url(../images/blackorchid.png)
 	padding:15px;
 	border:1px solid #333;
 	background-color:#FFF;
+	font-family: 'Libre Baskerville', serif;
 	}
 
 div.box {
@@ -31,10 +32,10 @@ strong {
 	font-size:larger;
 }
 
-A:link {text-decoration: none}
-A:visited {text-decoration: none}
-A:active {text-decoration: none}
-A:hover {text-decoration: underline; color: red;}
+A:link {text-decoration: none; color:#ab0202;}
+A:visited {text-decoration: none; color:#ab0202;}
+A:active {text-decoration: none; color:#ab0202;}
+A:hover {text-decoration:none; color: black;}
 
 h1 {
 	color:#ab0202;
