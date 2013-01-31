@@ -42,7 +42,7 @@ var what=ev.target.textContent;
 document.getElementById("div4").innerHTML="Image arrived at "+what; 
 
 if(what == 1 && data == 1){
-	window.open("option1.html"); 
+	$.colorbox({href:"option1.html", width:"500px", height:"450px"});
 	}
 
 else if(what == 2 && data == 1){
