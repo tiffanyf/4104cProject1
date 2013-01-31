@@ -1,19 +1,22 @@
 <!DOCTYPE HTML>
 <html>
-<head><title>JMM Drag and Drop</title>
-<!--
-	Example for DIG4104c
-    Based on W3C example at
-    http://www.w3schools.com/html/html5_draganddrop.asp
-    M. Moshell - December 2012
--->
+<head>
+
+<title>Tiffany Furman - Project 1</title>
+
+<link rel="stylesheet" href="css/colorbox.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
 
 <style type="text/css">
 #div1, #div2
-{float:left; width:100px; height:200px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+{float:left; width:100px; height:100px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
 #div3
-{float:left; width:100px; height:200px; margin:10px;padding:10px;border:3px solid #aaaaaa;}
+{float:left; width:100px; height:100px; margin:10px;padding:10px;border:3px solid #aaaaaa;}
+#coupons
+{float:right; width:300px; height:100px; margin:50px;}
 </style>
+
 <script>
 function allowDrop(ev)
 {
@@ -32,9 +35,39 @@ var data=ev.dataTransfer.getData("Text"); //data is id of planet
 var f=document.getElementById(data); // f is object of the planet
 ev.target.appendChild(f);
 
+console.log(data);
+
 var what=ev.target.textContent;
 
-document.getElementById("div4").innerHTML="Image arrived at "+what;  
+document.getElementById("div4").innerHTML="Image arrived at "+what; 
+
+if(what == 1 && data == 1){
+	window.open("option1.html"); 
+	}
+
+else if(what == 2 && data == 1){
+	window.open("option2.html");
+	}
+
+else if(what == 3) {
+	window.open("option3.html");
+	}
+	
+else if(what == 1 && data == 2){
+	window.open("option4.html");
+	}	
+
+else if(what == 2 && data == 2){
+	window.open("option5.html");	
+	}
+	
+else if(what == 1 && data == 3){
+	window.open("option6.html");
+	}
+
+else if(what == 2 && data == 3){
+	window.open("option7.html");
+	}
 
 }
 
@@ -44,13 +77,22 @@ document.getElementById("div4").innerHTML="Image arrived at "+what;
 </head>
 <body>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="images/fiver.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="88">Blood Type A - College Students - $19/mo</div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >All Blood Types - Healthy Professionals - $39/mo
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">1</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >2</div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">3</div>
+<div id="div4"><img src="images/fiver.png" draggable="true" ondragstart="drag(event)" id="1" width="88" height="88"></div>
 
+<div id="coupons">
+<p><img src="images/tenner.png" draggable="true" ondragstart="drag(event)" id="2" width="88" height="88"></p>
+<p><img src="images/twentyfiver.png" draggable="true" ondragstart="drag(event)" id="3" width="88" height="88"></p>
+<p><img src="images/fiver.png" draggable="true" ondragstart="drag(event)" id="1" width="88" height="88"></p>
 </div>
-<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">Attorneys - $0/mo</div>
-<div id="div4"></div>
+
+<a class="gallery" href="images/tenner.png">Testing</a>
+
+<script>
+    jQuery('a.gallery').colorbox();
+</script>
 
 
 </body>
