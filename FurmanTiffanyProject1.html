@@ -4,17 +4,33 @@
 
 <title>Tiffany Furman - Project 1</title>
 
+<link rel="stylesheet" href="css/styles.css" />
 <link rel="stylesheet" href="css/colorbox.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.colorbox-min.js"></script>
 
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
 <style type="text/css">
 #div1, #div2
-{float:left; width:100px; height:100px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+{float:left; width:100px; height:100px; margin:10px 33px 0px 0px;padding:10px;border:3px dashed #ab0202; color:#fff;}
 #div3
-{float:left; width:100px; height:100px; margin:10px;padding:10px;border:3px solid #aaaaaa;}
-#coupons
-{float:right; width:300px; height:100px; margin:50px;}
+{float:left; width:100px; height:100px; margin:10px 33px 0px 0px;padding:10px;border:3px dashed #ab0202; color:#fff;}
+#div4
+{visibility:hidden; background-color:blue; width:100px; height:100px; margin:300px 0px 0px 0px;}
+#div5, #div6
+{float:left; width:100px; height:100px; margin:10px 33px 0px 0px;padding:10px;}
+#div7
+{float:left; width:100px; height:100px; margin:10px 33px 0px 0px;padding:10px;}
+#div8, #div9
+{float:left; width:100px; height:100px; margin:75px 33px 0px 0px;padding:10px;}
+#div10
+{float:left; width:100px; height:100px; margin:75px 33px 0px 0px;padding:10px;}
+#lecontainer
+{margin:0px 0px 0px 23px;}
+#lecontainer2
+{margin:-300px 0px 0px 23px;}
+
 </style>
 
 <script>
@@ -77,23 +93,44 @@ else if(what == 2 && data == 3){
 </head>
 <body>
 
+<div id="Content">
+
+<div id="header"><h1>The Vampire Association of Transylflorida</h1></div>
+
+<div id="div0"><p>Please drag the coupon you want to use to the membership option you are selecting.</p></div>
+
+<div id="lecontainer">
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">1</div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >2</div>
 <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">3</div>
-<div id="div4"></div>
-
-<div id="coupons">
-<p><img src="images/tenner.png" draggable="true" ondragstart="drag(event)" id="2" width="88" height="88"></p>
-<p><img src="images/twentyfiver.png" draggable="true" ondragstart="drag(event)" id="3" width="88" height="88"></p>
-<p><img src="images/fiver.png" draggable="true" ondragstart="drag(event)" id="1" width="88" height="88"></p>
 </div>
 
-<a class="gallery" href="images/tenner.png">Testing</a>
+<div id="lecontainer2">
+<div id="div5">
+<h2>$19/mo</h2>
+<p>Type A Blood Only</p>
+<p>Starving Colledge Student</p>
+</div>
+<div id="div6">
+<h2>$39/mo</h2>
+<p>All Blood Types</p>
+<p>Healthy Professionals</p>
+</div>
+<div id="div7">
+<h2>$0/mo</h2>
+<p>Professional Courtesy</p>
+<p>Attorneys</p>
+</div>
 
-<script>
-    jQuery('a.gallery').colorbox();
-</script>
+<div id="coupons">
+<div id="div8"><img src="images/fiver.png" draggable="true" ondragstart="drag(event)" id="1" width="88" height="88"></div>
+<div id="div9"><img src="images/tenner.png" draggable="true" ondragstart="drag(event)" id="2" width="88" height="88"></div>
+<div id="div10"><img src="images/twentyfiver.png" draggable="true" ondragstart="drag(event)" id="3" width="88" height="88"></div>
+</div>
 
+<div id="div4"></div>
+
+</div>
 
 </body>
 </html>

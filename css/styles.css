@@ -1,9 +1,30 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+margin:50px 0px; padding:0px;
+text-align:center;
+background-image:url(../images/blackorchid.png)
+}
+
+#Content {
+	width:500px;
+	height:700px;
+	margin:0px auto;
+	text-align:center;
+	padding:15px;
+	border:1px solid #333;
+	background-color:#FFF;
+	}
+
 div.box {
 	font-family:Arial, Helvetica, sans-serif;
 }
+
+/*div#coupons {
+	margin:120px 103px 0px 0px;
+	text-align:center;
+}*/
 
 strong {
 	color:#C00;
@@ -14,3 +35,18 @@ A:link {text-decoration: none}
 A:visited {text-decoration: none}
 A:active {text-decoration: none}
 A:hover {text-decoration: underline; color: red;}
+
+h1 {
+	color:#ab0202;
+	font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
+	font-family: 'Libre Baskerville', serif;
+	color:#ab0202;
+	font-weight:700;
+}
+
+p {
+	font-family: 'Libre Baskerville', serif;
+}
